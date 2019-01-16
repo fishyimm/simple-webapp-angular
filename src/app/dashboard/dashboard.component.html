@@ -1,0 +1,67 @@
+<h3>Top Heroes</h3>
+<div class="grid grid-pad">
+  <a
+    *ngFor="let hero of heroes"
+    class="col-1-4"
+    routerLink="/detail/{{ hero.id }}"
+  >
+    <div class="module hero">
+      <h4>{{ hero.name }}</h4>
+    </div>
+  </a>
+</div>
+
+<div class="col-sm">
+  <alert type="success">
+    <strong>Well done!</strong> You successfully read this important alert
+    message.
+  </alert>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg">
+      <alert type="success">
+        <strong>Well done!</strong> You successfully read this important alert
+        message.
+      </alert>
+    </div>
+    <div class="col-lg">One of three columns</div>
+    <div class="col-lg">One of three columns</div>
+  </div>
+  <!-- 
+  <div class="row">
+    <tabset>
+      <tab heading="Basic title" id="tab1">Basic content</tab>
+      <tab heading="Basic Title 1">Basic content 1</tab>
+      <tab heading="Basic Title 2">Basic content 2</tab>
+    </tabset>
+  </div> -->
+
+  <div class="row">
+    <div class="col-sm-12 col-md-8" style="max-height: 500px;">
+      <swiper [config]="config" [(index)]="index">
+        <div>
+          <img
+            src="https://metrouk2.files.wordpress.com/2019/01/GettyImages-693923250.jpg?quality=90&strip=all&zoom=1&resize=644%2C429"
+          />
+        </div>
+        <div>
+          <img
+            src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+          />
+        </div>
+        <div>
+          <img
+            src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31"
+          />
+        </div>
+        <div>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Angelina_Jolie_2_June_2014_%28cropped%29.jpg/220px-Angelina_Jolie_2_June_2014_%28cropped%29.jpg"
+          />
+        </div>
+      </swiper>
+    </div>
+  </div>
+</div>
